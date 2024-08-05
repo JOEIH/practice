@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+}
+button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 8px;
+    margin: 12px;
+    cursor: move;
+    font-size: 20px;
+    background-color: rgba(160, 238, 255, 0.594);
+}
+.container {
+    margin: 10px;
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    min-width: 90px;
+}
+.draggable.dragging {
+    opacity: 0.5;
+}
