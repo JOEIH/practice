@@ -11,6 +11,7 @@ import { useState } from 'react';
 import UserId from './component/UserId';
 import UserPw from './component/UserPw';
 import StatePrac from './component/StatePrac';
+import LiftingUp from './component/LiftingUp';
 
 function App() {
   const movieList = [
@@ -55,6 +56,11 @@ function App() {
     }
   }
 
+  const [sen, setSen] = useState('')
+  function sentence(data) {
+    setSen(data)
+  }
+
   return (
     <div className="App">
       <Properties name="hyun"/>
@@ -86,6 +92,9 @@ function App() {
       <button onClick={loginCheck}>로그인</button>
       <hr />
       <StatePrac/>
+      <hr />
+      <h3>전달받은 데이터: {sen}</h3>
+      <LiftingUp changeSen={sentence}/>
     </div>
   );
 }

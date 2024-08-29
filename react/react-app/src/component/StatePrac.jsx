@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const StatePrac = () => {
     const fruits = [
@@ -17,6 +17,14 @@ const StatePrac = () => {
     const student3 = {...student2, region: "seoul"}
     const student4 = {region: "suwon", ...student3}
 
+    const [value, setValue] = useState({a:1, b:2, c: 3})
+    function changeVal() {
+        const newObj = {...value, b: 3}
+        setValue(newObj)
+    }
+
+    const[arr, setArr] = useState([1, 2, 3, 4])
+
     return (
         <div>
             {
@@ -28,6 +36,10 @@ const StatePrac = () => {
             <h3>{JSON.stringify(student3)}</h3>
             <h3>{JSON.stringify(student4)}</h3>
             <hr />
+            <h3>{JSON.stringify(value)}</h3>
+            <button onClick={changeVal}>클릭</button>
+            <hr/>
+            <h3>{JSON.stringify(arr)}</h3>
         </div>
     );
 };
