@@ -12,6 +12,17 @@ import UserId from './component/UserId';
 import UserPw from './component/UserPw';
 import StatePrac from './component/StatePrac';
 import LiftingUp from './component/LiftingUp';
+import EventClick from './component_2/EventClick';
+import ChangeFontSize from './component_2/ChangeFontSize';
+import TextHi from './component_2/TextHi';
+import InputName from './component_2/InputName';
+import CheckBox from './component_2/CheckBox';
+import CheckBoxWrapper from './component_2/CheckBoxWrapper';
+import SubmitName from './component_2/SubmitName';
+import SubmitTextarea from './component_2/SubmitTextarea';
+import SubmitSelect from './component_2/SubmitSelect';
+import ImgAndSelect from './component_2/ImgAndSelect';
+import CntUpBtn from './component_2/CntUpBtn';
 
 function App() {
   const movieList = [
@@ -61,6 +72,11 @@ function App() {
     setSen(data)
   }
 
+  const [total, setTotal] = useState(0)
+  function cntUp() {
+    setTotal((prev) => prev + 1)
+  }
+
   return (
     <div className="App">
       <Properties name="hyun"/>
@@ -95,6 +111,31 @@ function App() {
       <hr />
       <h3>전달받은 데이터: {sen}</h3>
       <LiftingUp changeSen={sentence}/>
+      <hr />
+      <EventClick />
+      <hr />
+      <ChangeFontSize />
+      <hr />
+      <TextHi />
+      <hr />
+      <InputName />
+      <hr />
+      <CheckBoxWrapper>
+        <CheckBox />
+      </CheckBoxWrapper>
+      <hr />
+      <SubmitName />
+      <hr />
+      <SubmitTextarea />
+      <hr />
+      <SubmitSelect />
+      <hr />
+      <ImgAndSelect />
+      <hr />
+      <h1>Total: {total}</h1>
+      <CntUpBtn onAdd={cntUp}/>
+      <CntUpBtn onAdd={cntUp}/>
+      <hr />
     </div>
   );
 }
