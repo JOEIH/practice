@@ -1,0 +1,21 @@
+ul, li {
+    list-style: none;
+}
+
+.wrap {
+    padding: 30px;
+    background-color: palegoldenrod;
+    &-blue {
+        color: blue
+    }
+    &-red {
+        color: red;
+    }
+    ul {
+        li {
+            &:nth-child(2) {
+                color: green;
+            }
+        }
+    }
+}

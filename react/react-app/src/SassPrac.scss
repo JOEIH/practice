@@ -1,0 +1,17 @@
+$main-font: "Helvetica";
+
+//@mixin은 선언
+@mixin title($font) {
+    font-size: 60px;
+    font-family: $font;
+    color: tomato;
+}
+
+//@include는 적용(mixin으로 선언했던 것 적용)
+.header {
+    @include title($main-font);
+}
+
+.back {
+    background-color: lightblue;
+}

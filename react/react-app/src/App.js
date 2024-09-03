@@ -23,6 +23,14 @@ import SubmitTextarea from './component_2/SubmitTextarea';
 import SubmitSelect from './component_2/SubmitSelect';
 import ImgAndSelect from './component_2/ImgAndSelect';
 import CntUpBtn from './component_2/CntUpBtn';
+import StyledComponent from './components3/StyledComponent';
+import MediaQuery from './components3/MediaQuery';
+import PostCss from './components3/PostCss';
+import SassPrac from './components3/SassPrac';
+import ImgSass from './components3/ImgSass';
+import ThirdScssComponent from './components3/ThirdScssComponent';
+import Nesting from './components3/Nesting';
+import Operator from './components3/Operator';
 
 function App() {
   const movieList = [
@@ -135,6 +143,22 @@ function App() {
       <h1>Total: {total}</h1>
       <CntUpBtn onAdd={cntUp}/>
       <CntUpBtn onAdd={cntUp}/>
+      <hr />
+      <StyledComponent />
+      <hr />
+      <MediaQuery />
+      <hr />
+      <PostCss />
+      <hr />
+      <SassPrac />
+      <hr />
+      <ImgSass />
+      <hr />
+      <ThirdScssComponent />
+      <hr />
+      <Nesting />
+      <hr />
+      <Operator />
       <hr />
     </div>
   );

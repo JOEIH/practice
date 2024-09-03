@@ -1,0 +1,10 @@
+$width: 500px;
+$height: 500px;
+
+.ImgSass-container {
+    border: 1px solid black;
+    width: $width;
+    height: $height;
+    background: url("../public/images/apple.png");
+    background-size: cover;
+}

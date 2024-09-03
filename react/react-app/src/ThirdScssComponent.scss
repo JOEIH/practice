@@ -1,0 +1,19 @@
+//전역변수
+$primary-color: black;
+
+.third-container {
+    //지역변수
+    //전역변수를 이 안에서 다시 선언하면 지역변수가 적용됨
+    $primary-color: red;
+    background-color: $primary-color;
+}
+
+.third-hello {
+    $primary-color: tomato;
+    color: $primary-color
+}
+
+.global {
+    background-color: $primary-color;
+    color: white;
+}

@@ -1,0 +1,9 @@
+.boxContainer {
+    background-color: yellowgreen;
+    $x: 400px;
+
+    width: $x;
+    height: ($x/5);
+
+    font-size: 10px + 30px/3;
+}
