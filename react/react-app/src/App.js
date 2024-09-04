@@ -1,39 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
-import Properties from './component/Properties';
-import Wrapper from './component/Wrapper';
-import Content from './component/Content';
-import ChildComponent from './component/ChildComponent';
-import PropTypesComponent from './component/PropTypesComponent';
-import MapPrac from './component/MapPrac';
-import MenuComponent from './component/MenuComponent';
-import { useState } from 'react';
-import UserId from './component/UserId';
-import UserPw from './component/UserPw';
-import StatePrac from './component/StatePrac';
-import LiftingUp from './component/LiftingUp';
-import EventClick from './component_2/EventClick';
-import ChangeFontSize from './component_2/ChangeFontSize';
-import TextHi from './component_2/TextHi';
-import InputName from './component_2/InputName';
-import CheckBox from './component_2/CheckBox';
-import CheckBoxWrapper from './component_2/CheckBoxWrapper';
-import SubmitName from './component_2/SubmitName';
-import SubmitTextarea from './component_2/SubmitTextarea';
-import SubmitSelect from './component_2/SubmitSelect';
-import ImgAndSelect from './component_2/ImgAndSelect';
-import CntUpBtn from './component_2/CntUpBtn';
-import StyledComponent from './components3/StyledComponent';
-import MediaQuery from './components3/MediaQuery';
-import PostCss from './components3/PostCss';
-import SassPrac from './components3/SassPrac';
-import ImgSass from './components3/ImgSass';
-import ThirdScssComponent from './components3/ThirdScssComponent';
-import Nesting from './components3/Nesting';
-import Operator from './components3/Operator';
+import UseStatePrac from './components4/UseStatePrac';
+import AddList from './components4/AddList';
+import UseStateCallback from './components4/UseStateCallback';
+import UserList from './components4/UserList';
+// import Properties from './component/Properties';
+// import Wrapper from './component/Wrapper';
+// import Content from './component/Content';
+// import ChildComponent from './component/ChildComponent';
+// import PropTypesComponent from './component/PropTypesComponent';
+// import MapPrac from './component/MapPrac';
+// import MenuComponent from './component/MenuComponent';
+// import { useState } from 'react';
+// import UserId from './component/UserId';
+// import UserPw from './component/UserPw';
+// import StatePrac from './component/StatePrac';
+// import LiftingUp from './component/LiftingUp';
+// import EventClick from './component_2/EventClick';
+// import ChangeFontSize from './component_2/ChangeFontSize';
+// import TextHi from './component_2/TextHi';
+// import InputName from './component_2/InputName';
+// import CheckBox from './component_2/CheckBox';
+// import CheckBoxWrapper from './component_2/CheckBoxWrapper';
+// import SubmitName from './component_2/SubmitName';
+// import SubmitTextarea from './component_2/SubmitTextarea';
+// import SubmitSelect from './component_2/SubmitSelect';
+// import ImgAndSelect from './component_2/ImgAndSelect';
+// import CntUpBtn from './component_2/CntUpBtn';
+// import StyledComponent from './components3/StyledComponent';
+// import MediaQuery from './components3/MediaQuery';
+// import PostCss from './components3/PostCss';
+// import SassPrac from './components3/SassPrac';
+// import ImgSass from './components3/ImgSass';
+// import ThirdScssComponent from './components3/ThirdScssComponent';
+// import Nesting from './components3/Nesting';
+// import Operator from './components3/Operator';
 
 function App() {
-  const movieList = [
+  /* const movieList = [
     {
         title: '괴물',
         open: '2023.06.02',
@@ -83,11 +87,11 @@ function App() {
   const [total, setTotal] = useState(0)
   function cntUp() {
     setTotal((prev) => prev + 1)
-  }
+  } */
 
   return (
     <div className="App">
-      <Properties name="hyun"/>
+      {/* <Properties name="hyun"/>
       <Properties />
       <hr />
       <Wrapper>
@@ -159,6 +163,14 @@ function App() {
       <Nesting />
       <hr />
       <Operator />
+      <hr /> */}
+      <UseStatePrac />
+      <hr />
+      <AddList />
+      <hr /> 
+      <UseStateCallback />
+      <hr />
+      <UserList />
       <hr />
     </div>
   );

@@ -28,3 +28,7 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  padding: 30px;
+}
