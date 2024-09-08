@@ -4,6 +4,9 @@ import UseStatePrac from './components4/UseStatePrac';
 import AddList from './components4/AddList';
 import UseStateCallback from './components4/UseStateCallback';
 import UserList from './components4/UserList';
+import { useState } from 'react';
+import { ThemeContext } from './components5/ThemeContext';
+import ContextTheme from './components5/ContextTheme';
 // import Properties from './component/Properties';
 // import Wrapper from './component/Wrapper';
 // import Content from './component/Content';
@@ -89,6 +92,9 @@ function App() {
     setTotal((prev) => prev + 1)
   } */
 
+    //context 실습 - 다크모드
+    const [darkMode, setDarkMode] = useState(false);
+
   return (
     <div className="App">
       {/* <Properties name="hyun"/>
@@ -164,14 +170,18 @@ function App() {
       <hr />
       <Operator />
       <hr /> */}
-      <UseStatePrac />
+      {/* <UseStatePrac />
       <hr />
       <AddList />
       <hr /> 
       <UseStateCallback />
       <hr />
       <UserList />
-      <hr />
+      <hr /> */}
+      {/* Context 사용 */}
+      <ThemeContext.Provider value={{darkMode, setDarkMode}}>
+        <ContextTheme />
+      </ThemeContext.Provider>
     </div>
   );
 }
