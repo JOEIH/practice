@@ -1,12 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect, useRef, useState } from 'react';
-import Board from './components/Board';
-import Counter from "./components/Counter"
-import Input from './components/Input';
-import AutoCounter from './components/AutoCounter';
-import Pagination from './components/Pagination';
-import PageHandler from './components/PageHandler';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import Checkbox from './components/Checkbox';
+import useToggle from './hooks/useToggle';
+import Box from './components/Box';
+import useHover from './hooks/useHover';
+import useKeyPress from './hooks/useKeyPress';
+import LoginForm from './components/LoginForm';
+import Text from './components/Text';
+// import Board from './components/Board';
+// import Counter from "./components/Counter"
+// import Input from './components/Input';
+// import AutoCounter from './components/AutoCounter';
+// import Pagination from './components/Pagination';
+// import PageHandler from './components/PageHandler';
+// import Box from './components/Box';
+// import UseMemoShowSum from './components/UseMemoShowSum';
+// import ReactMemoBox from './components/ReactMemoBox';
 
 function App() {
   /* const [visible, setVisible] = useState(false)
@@ -61,14 +71,31 @@ function App() {
 
   //페이지네이션
   //클라이언트 사이드에서의 페이지네이션
-  const [page, setPage] = useState(0);
-  const articles = new Array(100).fill().map((_, i) => ({
-    id: i,
-    title: `${i}번 게시물`
-  }))
+  // const [page, setPage] = useState(0);
+  // const articles = new Array(100).fill().map((_, i) => ({
+  //   id: i,
+  //   title: `${i}번 게시물`
+  // }))
 
-  const limit = 6;
-  const offset = page * limit;
+  // const limit = 6;
+  // const offset = page * limit;
+
+  // const [label, setLabel] = useState('Result') 
+  
+  // const [count, setCount] = useState(0)
+
+  // const [foodOn, setFoodOn] = useState(false);
+  // const [clothesOn, setclothesOn] = useState(false);
+  // const [shelterOn, setshelterOn] = useState(false);
+
+  // const foodChange = useCallback((e) => setFoodOn(e.target.checked), []);
+  // const clothesChange = useCallback((e) => setclothesOn(e.target.checked), []);
+  // const shelterChange = useCallback((e) => setshelterOn(e.target.checked), []);
+
+  const [on, toggle] = useToggle();
+  const [ref, isHover] = useHover();
+  const keyPressed = useKeyPress('a');
+
 
   return (
     <div className="App">
@@ -103,9 +130,25 @@ function App() {
       <button onClick={() => inputRef.current.focus()}>Focus</button> */}
       {/* useRef를 지역변수로 사용하는 경우 */}
       {/* <AutoCounter /> */}
-      <PageHandler defaultPage={0} limit={limit} total={articles.length} onChange={setPage}/>
-      <Pagination articles={articles.slice(offset, offset + limit)}/>
+      {/* <PageHandler defaultPage={0} limit={limit} total={articles.length} onChange={setPage}/>
+      <Pagination articles={articles.slice(offset, offset + limit)}/> */}
+      {/* <Box bgColor="red"/> */}
+      {/* <button onClick={() => setLabel(label + ':')}>Change Label</button>
+      <UseMemoShowSum label={"Result"} n={100000000}/> */}
+      {/* {count}
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <ReactMemoBox /> */}
 
+      {/* <Checkbox label="Food" on={foodOn} onChange={foodChange}/>
+      <Checkbox label="Clothes" on={clothesOn} onChange={clothesChange}/>
+      <Checkbox label="Shelter" on={shelterOn} onChange={shelterChange}/> */}
+      <Checkbox on={on} onChange={toggle}/>
+      {/* <button onClick={toggle}>{on ? 'True' : 'False'}</button> */}
+      {isHover ? 'hover' : 'mouseout'}
+      <Box ref={ref} />
+
+      {keyPressed && "Pressed"}
+      <Text />
     </div>
   );
 }
