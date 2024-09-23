@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import UseStatePrac from './components4/UseStatePrac';
-import AddList from './components4/AddList';
-import UseStateCallback from './components4/UseStateCallback';
-import UserList from './components4/UserList';
+// import UseStatePrac from './components4/UseStatePrac';
+// import AddList from './components4/AddList';
+// import UseStateCallback from './components4/UseStateCallback';
+// import UserList from './components4/UserList';
 import { useState } from 'react';
 import { ThemeContext } from './components5/ThemeContext';
 import ContextTheme from './components5/ContextTheme';
+import Counter from './features/counter/Counter';
+import Asynchronous from './components5/Asynchronous';
 // import Properties from './component/Properties';
 // import Wrapper from './component/Wrapper';
 // import Content from './component/Content';
@@ -93,7 +95,7 @@ function App() {
   } */
 
     //context 실습 - 다크모드
-    const [darkMode, setDarkMode] = useState(false);
+    // const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div className="App">
@@ -179,9 +181,14 @@ function App() {
       <UserList />
       <hr /> */}
       {/* Context 사용 */}
-      <ThemeContext.Provider value={{darkMode, setDarkMode}}>
+      {/* <ThemeContext.Provider value={{darkMode, setDarkMode}}>
         <ContextTheme />
-      </ThemeContext.Provider>
+      </ThemeContext.Provider> */}
+      <hr />
+      {/* redux */}
+      <Counter />
+      <hr />
+      <Asynchronous />
     </div>
   );
 }
